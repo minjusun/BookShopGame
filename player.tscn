@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6xlnssjc5jsu"]
 
 [ext_resource type="Texture2D" uid="uid://drklqxtewx73w" path="res://assets/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bejng5rtwsyjy" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -49,14 +50,15 @@ animations = [{
 radius = 9.219544
 
 [node name="Player" type="CharacterBody2D" unique_id=492459345]
+script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=641834897]
-position = Vector2(-1, -16)
+position = Vector2(1, -20)
 sprite_frames = SubResource("SpriteFrames_1jxqw")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.19298077
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=85595292]
-position = Vector2(-1, -14)
+position = Vector2(1, -16)
 shape = SubResource("CircleShape2D_dw050")
